@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivek Kumar | Portfolio</title>
+    <link rel="icon" href="/images/global/site-icon.png" />
+
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/project.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+  <style>
+  .skills-section {
+    padding: 120px 5%;
+    background: var(--color-bg);
+  }
+
+  .skills-header h1 {
+    font-family: 'Rader', serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 80px;
+    line-height: 0.9;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .skill-category {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+
+  .skill-category h3 {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .tag {
+    font-family: 'Formula Narrow', sans-serif;
+    font-size: 1.8rem;
+    padding: 10px 25px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: default;
+    background: transparent;
+  }
+
+  .tag:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1) rotate(-2deg);
+    border-color: var(--color-primary);
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 1000px) {
+    .skill-category {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .tag {
+      font-size: 1.2rem;
+      padding: 8px 18px;
+    }
+  }
+  </style>
+
+  </head>
+  <body>
+    <!-- page transition  -->
+    <div class="transition">
+      <div class="transition-overlay overlay-1"></div>
+      <div class="transition-overlay overlay-2"></div>
+      <div class="transition-overlay overlay-3"></div>
+      <div class="transition-overlay overlay-4"></div>
+      <div class="transition-overlay overlay-5"></div>
+    </div>
+
+    <div class="page home-page">
+        <!-- nav -->
+        <nav>
+          <div class="logo">
+            <div class="logo-container">
+              <p class="mn"><a href="/">V ✦ K</a></p>
+            </div>
+          </div>
+          <div class="menu-toggle-btn">
+            <div class="menu-toggle-btn-wrapper">
+              <p class="mn open-label">Menu</p>
+              <p class="mn close-label">Close</p>
+            </div>
+          </div>
+        </nav>
+  
+        <div class="nav-overlay">
+          <div class="nav-items">
+            <div class="nav-item active">
+              <p><a href="/">Home</a></p>
+            </div>
+
+            <!-- Might add in future but disabled for now - Prashant -->
+            <!-- <div class="nav-item">
+              <p><a href="/work">Work</a></p>
+            </div>
+            <div class="nav-item">
+              <p><a href="/about">About</a></p>
+            </div> -->
+            <div class="nav-item">
+              <p><a href="/contact">Contact</a></p>
+            </div>
+          </div>
+          <div class="nav-footer">
+            <div class="nav-footer-item">
+              <div class="nav-footer-item-header">
+                <p class="mn">Find Me</p>
+              </div>
+              <div class="nav-footer-item-copy">
+                <p class="mn"><a href="https://github.com/vivekkumxr-pxl24" target="_blank">Github</a></p>
+                <p class="mn"><a href="https://www.linkedin.com/in/vivek-kumar-aa6a811a5/" target="_blank">LinkedIn</a></p>
+              </div>
+            </div>
+            <div class="nav-footer-item">
+              <div class="nav-footer-item-copy">
+                <p class="mn"></p>
+              </div>
+            </div>
+            <div class="nav-footer-item">
+              <div class="nav-footer-item-header">
+                <p class="mn">Get in Touch</p>
+              </div>
+              <div class="nav-footer-item-copy">
+                <p class="mn">
+                  <a href="mailto:vivekrwt8400@gmail.com" target="_blank"
+                    >vivekrwt8400@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+             
+        <!-- home - hero -->
+      <section class="hero">
+        <div class="hero-header-wrapper">
+          <div class="hero-header hero-header-1">
+            <h1>Vivek</h1>
+          </div>
+          <div class="hero-header hero-header-2">
+            <h1>Kumar</h1>
+          </div>
+        </div>
+        <div class="hero-footer">
+          <div class="hero-footer-symbols">
+            <img src="/images/global/symbols.png" alt="" />
+          </div>
+          <div class="hero-footer-scroll-down">
+            <p class="mn"><a href="https://drive.google.com/file/d/1lhunYlVGdRqDiOsPf6xECVWj0x6tDbzR/view?usp=sharing" target="_blank" class="resume-link"> Fetch // Resume</a></p>
+          </div>
+          <div class="hero-footer-tags">
+            <p class="mn">Showcase Mode: ON </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- home - hero img holder -->
+      <section class="hero-img-holder">
+        <div class="hero-img">
+          <img src="/images/hero/image-1.jpg" alt="" />
+        </div>
+      </section>
+
+
+
+<!-- about - about hero -->
+<section class="about-hero">
+    <div class="about-hero-header">
+      <h1>Hi, I'm</h1>
+      <h1>Vivek</h1>
+    </div>
+    <div class="about-hero-bio">
+      <p class="ss">
+        I'm a designer and full-stack developer who's obsessed with creating 
+        award-worthy digital experiences. From crafting pixel-perfect interfaces 
+        to architecting robust backend systems, I live at the intersection where 
+        beautiful design meets clean code. My work draws inspiration from the best 
+        of Awwwards — those jaw-dropping sites that make you pause mid-scroll and 
+        wonder "how did they do that?"
+      </p>
+      <p class="mn">Code / Design / Craft / Repeat</p>
+    </div>
+    <div class="about-hero-portrait">
+      <img
+        src="/public/images/services-header/Portrait.png"
+        alt="Vivek Kumar Portrait"
+      />
+    </div>
+  </section>
+
+      <!-- home - featured work -->
+      <section class="featured-work">
+        <div class="featured-images"></div>
+        <div class="featured-titles">
+          <div class="featured-title-wrapper">
+            <h1 class="featured-title">Featured Projects</h1>
+          </div>
+          <div class="featured-title-wrapper">
+            <div class="featured-title-img">
+              <img src="/images/work-items/work-item-1.jpg" alt="Personal Portfolio" />
+            </div>
+            <h1 class="featured-title">
+              <a href="/work.html?id=portfolio" style="text-decoration: none; color: inherit;">
+                Personal Portfolio ✦
+              </a>
+            </h1>
+          </div>
+          
+          <div class="featured-title-wrapper">
+            <div class="featured-title-img">
+              <img src="/images/work-items/work-item-1.jpg" alt="Library System" />
+            </div>
+            <h1 class="featured-title">
+              <a href="/work.html?id=library" style="text-decoration: none; color: inherit;">
+                Library Management System ✦
+              </a>
+            </h1>
+          </div>
+          <div class="featured-title-wrapper">
+            <div class="featured-title-img">
+              <img src="/images/work-items/work-item-4.jpg" alt="" />
+            </div>
+            <h1 class="featured-title">
+              <a href="/work.html?id=weather" style="text-decoration: none; color: inherit;">
+                Weather Tracking App ✦
+              </a>
+            </h1>
+          </div>
+
+          <div class="featured-title-wrapper">
+            <div class="featured-title-img">
+              <img src="/images/work-items/work-item-5.jpg" alt="" />
+            </div>
+            
+          </div>
+
+        </div>
+        <div class="featured-work-indicator"></div>
+        <div class="featured-work-footer">
+          <p class="mn">Project Portfoliio [ 10 ]</p>
+          <p class="mn">///////////////////</p>
+          <p class="mn"><a href="#">View All Projects</a></p>
+        </div>
+      </section>
+
+      
+
+        <!-- home - skill-section -->
+     <section class="skills-section">
+  <div class="skills-header">
+    <p class="mn">// Tech Stack & Expertise</p>
+    <h1>Technical Skills</h1>
+  </div>
+
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3 class="mn">Development</h3>
+      <div class="skill-tags">
+        <span class="tag">Next.js</span>
+        <span class="tag">React</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">JavaScript ES6+</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="mn">Core & Tools</h3>
+      <div class="skill-tags">
+        <span class="tag">C++ / DSA</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Git & GitHub</span>
+        <span class="tag">GSAP</span>
+        <span class="tag">Vercel</span>
+      </div>
+    </div>
+     </section>
+
+
+
+           <!-- home - services header -->
+           <section class="services-header">
+            <div class="services-header-content">
+              <div class="services-profile-icon">
+                <img
+                  src="/public/images/services-header/Portrait.png"
+                  alt="Prashant Koirala's Portrait"
+                />
+              </div>
+              <p>Your Vision. My Expertise.</p>
+              <div class="services-header-title">
+                <h1>Full-stack development</h1>
+                <h1>& Design Solutions</h1>
+              </div>
+              <div class="services-header-arrow-icon">
+                <h1>&#8595;</h1>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+          
+    
+          <!-- home - services/skills section -->
+          <section class="services">
+            <div class="service-card" id="service-card-1">
+              <div class="service-card-inner">
+                <div class="service-card-content">
+                  <h1>Frontend Development </h1>
+                </div>
+                <div class="service-card-img">
+                  <img
+                    src="/images/services/service-1.jpg"
+                    alt="Front-End Development"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="service-card" id="service-card-2">
+              <div class="service-card-inner">
+                <div class="service-card-content">
+                  <h1>Backend Development</h1>
+                </div>
+                <div class="service-card-img">
+                  <img
+                    src="/images/services/service-2.jpg"
+                    alt="Backend Development"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="service-card" id="service-card-3">
+              <div class="service-card-inner">
+                <div class="service-card-content">
+                  <h1>UI/UX Design</h1>
+                </div>
+                <div class="service-card-img">
+                  <img
+                    src="/images/services/service-3.jpg"
+                    alt="UI/UX Design"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="service-card" id="service-card-4">
+              <div class="service-card-inner">
+                <div class="service-card-content">
+                  <h1>Web Applications</h1>
+                </div>
+                <div class="service-card-img">
+                  <img
+                    src="/images/services/service-4.jpg"
+                    alt="Web Applications"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+        <!-- home - contact cta -->
+      <section class="contact-cta">
+        <div class="contact-button">
+          <a href="/contact"></a>
+          <div class="contact-text-small">
+            <p>Let's build something amazing together</p>
+          </div>
+          <div class="contact-text-large"><h1>Get in touch</h1></div>
+        </div>
+      </section>
+
+<!-- home - footer -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-symbols footer-symbols-1">
+        <img src="/images/global/s6.png" alt="" />
+        <img src="/images/global/s6.png" alt="" />
+      </div>
+      <div class="footer-symbols footer-symbols-2">
+        <img src="/images/global/s6.png" alt="" />
+        <img src="/images/global/s6.png" alt="" />
+      </div>
+      <div class="footer-header">
+        <h1>Vivek Kumar</h1>
+      </div>
+      <div class="footer-row">
+        <div class="footer-col">
+          <p>Explore</p>
+          <p><a href="/home">Home</a></p>
+          <p><a href="/contact">Contact</a></p>
+        </div>
+        <div class="footer-col">
+          <p>Creative Hub
+          </p>
+          <p><a href="https://www.prashantkoirala.info.np" target="_blank">View Portfolio</a></p>
+          <p><a href="https://prashantkoirala.hashnode.dev/" target="_blank">View Blog</a></p>
+        </div>
+        <div class="footer-col">
+          <p>Connect</p>
+          <p>
+            <a href="https://www.linkedin.com/in/vivek-kumar-aa6a811a5/" target="_blank">LinkedIn</a>
+          </p>
+          <p>
+            <a href="https://github.com/vivekkumxr-pxl24" target="_blank"
+              >Github</a
+            >
+          </p>
+
+        </div>
+
+        
+      </div>
+      <div class="copyright-info">
+        <p class="mn">© - Vivek Kumar // 2026</p>
+        <p class="mn"></p>
+      </div>
+      <div class="explosion-container"></div>
+    </div>
+  </footer>
+
+
+
+    </div>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/menu.js"></script>
+    <script type="module" src="/js/hero.js"></script>
+    <script type="module" src="/js/featured-work.js"></script>
+    <script type="module" src="/js/services.js"></script>
+    <script type="module" src="/js/footer.js"></script>
+    <script type="module" src="/js/about.js"></script>
+    
+    
+  </body>
+</html>

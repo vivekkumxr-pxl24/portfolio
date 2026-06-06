@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details | Vivek Kumar</title>
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <style>
+      .work-content { padding: 150px 5%; min-height: 100vh; background: var(--color-bg); }
+      .project-category { font-family: 'Supply Mono', monospace; font-size: 0.875rem; text-transform: uppercase; color: #888; margin-bottom: 20px; display: block; }
+      .project-title-large { font-family: 'Rader', serif; font-size: clamp(4rem, 10vw, 8rem); line-height: 0.85; text-transform: uppercase; font-style: italic; margin-bottom: 60px; }
+      .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; margin-top: 50px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 40px; }
+      @media (max-width: 1000px) { .details-grid { grid-template-columns: 1fr; gap: 40px; } }
+      .description-text { font-family: 'Formula Narrow', sans-serif; font-size: 1.5rem; line-height: 1.2; }
+      .meta-info p { font-family: 'Supply Mono', monospace; text-transform: uppercase; margin-bottom: 15px; }
+      .meta-info a { color: var(--color-primary); text-decoration: none; border-bottom: 1px solid; padding-bottom: 2px; }
+    </style>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="transition-overlay overlay-1"></div>
+      <div class="transition-overlay overlay-2"></div>
+      <div class="transition-overlay overlay-3"></div>
+      <div class="transition-overlay overlay-4"></div>
+      <div class="transition-overlay overlay-5"></div>
+    </div>
+
+    <div class="page work-page">
+      <nav>
+        <div class="logo">
+          <div class="logo-container">
+            <p class="mn"><a href="/">V ✦ K</a></p>
+          </div>
+        </div>
+        <div class="back-home" style="padding: 20px;">
+            <p class="mn"><a href="/" style="text-decoration: none; color: inherit;">[ Close Project ]</a></p>
+        </div>
+      </nav>
+
+      <section class="work-content">
+        <span class="project-category" id="p-cat">// Web Development</span>
+        <h1 class="project-title-large" id="p-title">Project<br>Title</h1>
+
+        <div class="details-grid">
+          <div class="description-side">
+            <p class="description-text" id="p-desc">Project description will go here.</p>
+          </div>
+          <div class="meta-side">
+            <div class="meta-info">
+              <p id="p-tech"><span style="color: #888;">Tech Stack:</span> Loading...</p>
+              <p id="p-status"><span style="color: #888;">Status:</span> Loading...</p>
+              <p id="p-year"><span style="color: #888;">Year:</span> 2026</p>
+              <br>
+              <p><a href="#" id="p-source" target="_blank">→ View Source Code</a></p>
+              <br>
+              <p><a href="#" id="p-demo" target="_blank">→ View Live Demo</a></p>
+            </div>  
+          </div>  
+        </div>
+      </section>
+    </div>
+
+    <script type="module">
+      const projectData = {
+        "library": {
+          cat: "// Full-Stack Development",
+          title: "Online<br>Library<br>System",
+          desc: "Developing a digital infrastructure for Rajarshi Rananjay Singh Institute. Built with Next.js for high performance and MySQL for robust data management.",
+          tech: "Next.js, MySQL, Tailwind CSS",
+          status: "In Progress",
+          year: "2026",
+          source: "https://github.com/vivekkumxr-pxl24/library-lms-v1",
+          demo: "https://library-lms-v1.vercel.app/"
+        },
+        "weather": {
+          cat: "// API Integration",
+          title: "Weather<br>Tracking<br>App",
+          desc: "A responsive web application that fetches and displays real-time weather data based on user location using OpenWeather API.",
+          tech: "JavaScript (ES6+), REST API, CSS Grid",
+          status: "Completed",
+          year: "2026",
+          source: "https://github.com/vivekkumxr-pxl24/SkyCast-pro",
+          demo: "https://vivek-weather-app-alpha.vercel.app/"
+        },
+        "portfolio": {
+          cat: "// Creative Coding",
+          title: "Personal<br>Portfolio<br>2026",
+          desc: "An Awwwards-inspired portfolio built to showcase high-end animations and frontend mastery. Featuring GSAP and Lenis for smooth scrolling.",
+          tech: "JavaScript, GSAP, Vite, CSS Grid",
+          status: "Completed",
+          year: "2025",
+          source: "https://github.com/prashantkoirala465/web-development-portfolio",
+          demo: "/"
+        },
+        
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || "library"; 
+      const project = projectData[id];
+
+      if (project) {
+        document.getElementById('p-cat').innerText = project.cat;
+        document.getElementById('p-title').innerHTML = project.title;
+        document.getElementById('p-desc').innerText = project.desc;
+        document.getElementById('p-tech').innerHTML = `<span style="color: #888;">Tech Stack:</span> ${project.tech}`;
+        document.getElementById('p-status').innerHTML = `<span style="color: #888;">Status:</span> ${project.status}`;
+        document.getElementById('p-year').innerHTML = `<span style="color: #888;">Year:</span> ${project.year}`;
+        document.getElementById('p-source').href = project.source;
+        document.getElementById('p-demo').href = project.demo;
+      }
+    </script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/lenis-scroll.js"></script>
+  </body>
+</html>
